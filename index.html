@@ -1,6 +1,298 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kohei Fukuda | 福田航平 公式ホームページ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      padding-top: 70px;
+      font-family: sans-serif;
+    }
+    .lang-ja, .lang-en { display: none; }
+    .lang-ja.show, .lang-en.show { display: inline; }
+    .lang-toggle {
+      display: inline-block;
+      min-width: 6em;
+      text-align: center;
+    }
+    .news-box {
+      max-height: 200px;
+      overflow-y: auto;
+      background: #f4f4f4;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .news-list li {
+      padding: 0.3em 0;
+      border-bottom: 1px dashed #aaa;
+    }
+    .more-news-btn {
+      margin-top: 1rem;
+      cursor: pointer;
+      color: #0d6efd;
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
-Temporary file.
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Kohei Fukuda</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="nav-home">
+              <span class="lang-toggle">
+                <span class="lang-ja show">ホーム</span>
+                <span class="lang-en">Home</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav-about">
+              <span class="lang-toggle">
+                <span class="lang-ja show">経歴</span>
+                <span class="lang-en">About Me</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html" id="nav-research">
+              <span class="lang-toggle">
+                <span class="lang-ja show">研究内容</span>
+                <span class="lang-en">Research Interests</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html" id="nav-publications">
+              <span class="lang-toggle">
+                <span class="lang-ja show">業績</span>
+                <span class="lang-en">Publications</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lectures.html" id="nav-lectures">
+              <span class="lang-toggle">
+                <span class="lang-ja show">講義</span>
+                <span class="lang-en">Lectures</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" id="nav-contact">
+              <span class="lang-toggle">
+                <span class="lang-ja show">連絡先</span>
+                <span class="lang-en">Contact</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <span class="lang-switch nav-link" onclick="toggleLanguage()">English</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5">
+    <div class="lang-ja show">
+      <!-- Carousel -->
+      <div id="homepageCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+        
+        <!-- スライドのインジケータ（下の点） -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#homepageCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- スライド本体 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/SIMS_1.jpg" class="d-block w-100" alt="Image 1">
+            <!--<div class="carousel-caption">
+              <h5>画像1のキャプション（任意）</h5>
+            </div>-->
+          </div>
+          <div class="carousel-item">
+            <img src="images/SIMS_1.jpg" class="d-block w-100" alt="Image 2">
+            <!--<div class="carousel-caption">
+              <h5>画像1のキャプション（任意）</h5>
+            </div>-->
+          </div>
+          <div class="carousel-item">
+            <img src="images/SIMS_1.jpg" class="d-block w-100" alt="Image 3">
+            <!--<div class="carousel-caption">
+              <h5>画像1のキャプション（任意）</h5>
+            </div>-->
+          </div>
+        </div>
+
+        <!-- スライドのコントロール（左右矢印） -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">前へ</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">次へ</span>
+        </button>
+      </div>
+
+      <h1>Welcome!</h1>
+      
+      <div class="news-box">
+        <h2>📰 新着情報</h2>
+        <ul class="news-list">
+          <li><span class="date">2025/09/19</span> 日本地球化学会にてポスター発表を行いました。</li>
+          <li><span class="date">2025/06/23</span> AOMSC2025にてポスター発表を行いました。</li>
+          <li><span class="date">2025/06/11</span> 兵庫県川西市にて講演を行いました（川西生涯アカデミー: 宇宙地球科学への誘い）。</li>
+          <li><span class="date">2025/05/27</span> JpGU2025にて招待講演を行いました。</li>
+          <li><span class="date">2025/04/21</span> 中国岩石鉱物地球化学学会第19回年会にて招待講演を行いました。</li>
+          <li><span class="date">2025/03/31</span> 共著論文がRapid Communications in Mass Spectrometryに掲載されました。<a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/rcm.10038" target="_blank">[LINK]</a></li>
+          <!-- <li class="d-none"><span class="date">2025/02/12</span> 新しい論文が掲載されました。</li> -->
+        </ul>
+        <div class="more-news-btn" onclick="toggleNews()">もっと見る</div>
+      </div>
+    </div>
+
+    <div class="lang-en">
+      <div class="lang-en">
+        <!-- Carousel -->
+      <div id="homepageCarouselEn" class="carousel slide mb-4" data-bs-ride="carousel">
+        
+        <!-- スライドのインジケータ（下の点） -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#homepageCarouselEn" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#homepageCarouselEn" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#homepageCarouselEn" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- スライド本体 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/SIMS_1.jpg" class="d-block w-100" alt="Image 1">
+            <!--<div class="carousel-caption">
+              <h5>画像1のキャプション（任意）</h5>
+            </div>-->
+          </div>
+          <div class="carousel-item">
+            <img src="images/SIMS_1.jpg" class="d-block w-100" alt="Image 2">
+            <!--<div class="carousel-caption">
+              <h5>画像1のキャプション（任意）</h5>
+            </div>-->
+          </div>
+          <div class="carousel-item">
+            <img src="images/SIMS_1.jpg" class="d-block w-100" alt="Image 3">
+            <!--<div class="carousel-caption">
+              <h5>画像1のキャプション（任意）</h5>
+            </div>-->
+          </div>
+        </div>
+
+        <!-- スライドのコントロール（左右矢印） -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">前へ</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">次へ</span>
+        </button>
+      </div>
+  
+      <h1>Welcome!</h1>
+      
+      <div class="news-box">
+        <h2>📰 What's new!</h2>
+        <ul class="news-list">
+          <li><span class="date">2025/09/19</span> Poster presentation at the Geochemical Society of Japan annual meeting.</li>
+          <li><span class="date">2025/06/23</span> Poster presentation at AOMSC 2025.</li>
+          <li><span class="date">2025/06/11</span> Gave a public lecture in Kawanishi City, Hyogo (Kawanishi Lifelong Learning Academy: Invitation to Space and Earth Sciences).</li>
+          <li><span class="date">2025/05/27</span> Delivered an invited talk at JpGU 2025.</li>
+          <li><span class="date">2025/04/21</span> Delivered an invited talk at the 19th Annual Meeting of the Chinese Society for Mineralogy, Petrology, and Geochemistry.</li>
+          <li><span class="date">2025/03/31</span> A co-authored paper was published in *Rapid Communications in Mass Spectrometry.* <a href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/rcm.10038" target="_blank">[LINK]</a></li>
+        </ul>
+        <div class="more-news-btn" onclick="toggleNews()">Show more</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center mt-5 p-3 bg-light border-top">
+    &copy; 2025 Kohei Fukuda
+  </footer>
+
+  <script>
+    let currentLang = 'ja';
+    let newsExpanded = false;
+
+    function toggleLanguage() {
+      const newLang = currentLang === 'en' ? 'ja' : 'en';
+      setLanguage(newLang);
+    }
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-ja').forEach(el => el.classList.toggle('show', lang === 'ja'));
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('show', lang === 'en'));
+      currentLang = lang;
+      document.querySelector('.lang-switch').textContent = lang === 'en' ? '日本語' : 'English';
+      document.querySelector('.navbar-brand').href = 'index.html?lang=' + lang;
+      document.getElementById('nav-home').href = 'index.html?lang=' + lang;
+      document.getElementById('nav-about').href = 'about.html?lang=' + lang;
+      document.getElementById('nav-research').href = 'research.html?lang=' + lang;
+      document.getElementById('nav-publications').href = 'publications.html?lang=' + lang;
+      document.getElementById('nav-lectures').href = 'lectures.html?lang=' + lang;
+      document.getElementById('nav-contact').href = 'contact.html?lang=' + lang;
+
+      updateToggleText();
+    }
+
+    function toggleNews() {
+      newsExpanded = !newsExpanded;
+      const visibleList = document.querySelectorAll('.lang-' + currentLang + ' .news-list li');
+      visibleList.forEach((item, index) => {
+        if (index >= 2) item.classList.toggle('d-none', !newsExpanded);
+      });
+      updateToggleText();
+    }
+
+    function updateToggleText() {
+      const btn = document.querySelector('.more-news-btn');
+      if (currentLang === 'ja') {
+        btn.textContent = newsExpanded ? '閉じる' : 'もっと見る';
+      } else {
+        btn.textContent = newsExpanded ? 'Hide' : 'Show more';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const langParam = params.get('lang');
+      if (langParam === 'en') {
+        setLanguage('en');
+      } else {
+        setLanguage('ja');
+      }
+
+      toggleNews();
+      toggleNews();
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>経歴 | 福田航平</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body { padding-top: 70px; font-family: sans-serif; }
+    footer {
+      background: #2b4a6f;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+    .lang-fade { display: none; }
+    .lang-fade.active { display: block; }
+    .profile-img {
+      float: right;
+      margin-left: 20px;
+      max-width: 200px;
+      border-radius: 8px;
+    }
+    .lang-toggle {
+      display: inline-block;
+      min-width: 6em;
+      text-align: center;
+    }
+    .lang-ja, .lang-en {
+      display: none;
+    }
+    .lang-ja.show, .lang-en.show {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Kohei Fukuda</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="nav-home">
+              <span class="lang-toggle">
+                <span class="lang-ja show">ホーム</span>
+                <span class="lang-en">Home</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav-about">
+              <span class="lang-toggle">
+                <span class="lang-ja show">経歴</span>
+                <span class="lang-en">About Me</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html" id="nav-research">
+              <span class="lang-toggle">
+                <span class="lang-ja show">研究内容</span>
+                <span class="lang-en">Research Interests</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html" id="nav-publications">
+              <span class="lang-toggle">
+                <span class="lang-ja show">業績</span>
+                <span class="lang-en">Publications</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lectures.html" id="nav-lectures">
+              <span class="lang-toggle">
+                <span class="lang-ja show">講義</span>
+                <span class="lang-en">Lectures</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" id="nav-contact">
+              <span class="lang-toggle">
+                <span class="lang-ja show">連絡先</span>
+                <span class="lang-en">Contact</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <span class="lang-switch nav-link" onclick="toggleLanguage()">English</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="lang-fade lang-ja active">
+      <h2>福田 航平</h2>
+      <img src="images/profile_3.jpg" alt="Kohei Fukuda" class="profile-img">
+      <span style="font-size:1em;">助教（任期付）</span></p>
+      <p>大阪大学大学院理学研究科 附属フォアフロント研究センター所属</p>
+      <p>大阪大学大学院理学研究科 宇宙地球科学専攻（兼任）</p>
+      <p>〒560-0043 大阪府豊中市待兼山町1-1</p>
+      <p style="margin-bottom: 2em;">ORCID: <a href="https://orcid.org/0000-0002-8883-9251" target="_blank">0000-0002-8883-9251</a></p>
+
+      <h2>職歴</h2>
+      <ul style="margin-bottom: 2em;">
+        <li>2022年4月 - 現在: 現職</li>
+        <li>2021年7月 - 2022年3月: ウィスコンシン大学マディソン校 アシスタントサイエンティスト</li>
+        <li>2018年7月 - 2021年6月: ウィスコンシン大学マディソン校 リサーチアソシエイト (アドバイザー: 木多紀子)</li>
+      </ul>
+
+      <h2>学歴</h2>
+      <ul>
+        <li>2018年3月: 東京大学 理学系研究科 地球惑星科学専攻 博士（理学） 指導教員: 比屋根 肇</li>
+        <li>2014年3月: 東京大学 理学系研究科 地球惑星科学専攻 修士（理学） 指導教員: 比屋根 肇</li>
+        <li>2011年3月: 広島大学 理学部 地球惑星システム学科 学士（理学） 指導教員: 寺田 健太郎</li>
+        <li>2007年3月: 宮崎大宮高等学校文科情報科卒</li>
+      </ul>
+    </div>
+
+    <div class="lang-fade lang-en">
+      <h2>Kohei Fukuda</h2>
+      <img src="images/profile_3.jpg" alt="Kohei Fukuda" class="profile-img">
+      <span style="font-size:1em;">Assistant Professor (Non-tenured)</span></p>
+      <p>Forefront Research Center, Graduate School of Science, The University of Osaka</p>
+      <p>Department of Earth and Space Science, Graduate School of Science, The University of Osaka (Adjunct)</p>
+      <p>1-1 Machikaneyama-cho, Toyonaka, Osaka 560-0043, Japan</p>
+      <p>ORCID: <a href="https://orcid.org/0000-0002-8883-9251" target="_blank">0000-0002-8883-9251</a></p>
+
+      <h2>Academic Positions</h2>
+      <ul>
+        <li>Apr. 2022 - Present: Current position</li>
+        <li>Jul. 2021 - Mar. 2022: Assistant Scientist, University of Wisconsin-Madison</li>
+        <li>Jul. 2018 - Jun. 2021: Research Associate, University of Wisconsin-Madison (Supervisor: Noriko T. Kita)</li>
+      </ul>
+
+      <h2>Education</h2>
+      <ul>
+        <li>Mar. 2018: Ph.D. in Science, The University of Tokyo (Supervisor: Hajime Hiyagon)</li>
+        <li>Mar. 2014: M.Sc. in Science, The University of Tokyo (Supervisor: Hajime Hiyagon)</li>
+        <li>Mar. 2011: B.Sc. in Science, Hiroshima University (Supervisor: Kentaro Terada)</li>
+        <li>Mar. 2007: Graduated from Miyazaki Omiya High School (Communication & Humanities Course)</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Kohei Fukuda</footer>
+
+  <script>
+    let currentLang = 'ja';
+    function toggleLanguage() {
+      const newLang = currentLang === 'en' ? 'ja' : 'en';
+      setLanguage(newLang);
+    }
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-fade').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-fade.lang-' + lang).forEach(el => el.classList.add('active'));
+      document.querySelectorAll('.lang-ja').forEach(el => el.classList.toggle('show', lang === 'ja'));
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('show', lang === 'en'));
+      currentLang = lang;
+      document.querySelector('.lang-switch').textContent = lang === 'en' ? '日本語' : 'English';
+      document.querySelector('.navbar-brand').href = 'index.html?lang=' + lang;
+      document.getElementById('nav-home').href = 'index.html?lang=' + lang;
+      document.getElementById('nav-about').href = 'about.html?lang=' + lang;
+      document.getElementById('nav-research').href = 'research.html?lang=' + lang;
+      document.getElementById('nav-publications').href = 'publications.html?lang=' + lang;
+      document.getElementById('nav-lectures').href = 'lectures.html?lang=' + lang;
+      document.getElementById('nav-contact').href = 'contact.html?lang=' + lang;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const langParam = params.get('lang');
+      if (langParam === 'en') {
+        setLanguage('en');
+      } else {
+        setLanguage('ja');
+      }
+    });
+  </script>
+</body>
+</html>

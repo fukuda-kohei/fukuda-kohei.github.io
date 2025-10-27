@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>経歴 | 福田航平</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    body { padding-top: 70px; font-family: sans-serif; }
+    footer {
+      background: #2b4a6f;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+    .lang-fade { display: none; }
+    .lang-fade.active { display: block; }
+    .profile-img {
+      float: right;
+      margin-left: 20px;
+      max-width: 200px;
+      border-radius: 8px;
+    }
+    .lang-toggle {
+      display: inline-block;
+      min-width: 6em;
+      text-align: center;
+    }
+    .lang-ja, .lang-en {
+      display: none;
+    }
+    .lang-ja.show, .lang-en.show {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="index.html">Kohei Fukuda</a>
+<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto align-items-center">
+<li class="nav-item">
+<a class="nav-link" href="index.html" id="nav-home">
+<span class="lang-toggle">
+<span class="lang-ja show">ホーム</span>
+<span class="lang-en">Home</span>
+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="about.html" id="nav-about">
+<span class="lang-toggle">
+<span class="lang-ja show">経歴</span>
+<span class="lang-en">About Me</span>
+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="research.html" id="nav-research">
+<span class="lang-toggle">
+<span class="lang-ja show">研究内容</span>
+<span class="lang-en">Research Interests</span>
+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="publications.html" id="nav-publications">
+<span class="lang-toggle">
+<span class="lang-ja show">業績</span>
+<span class="lang-en">Publications</span>
+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="lectures.html" id="nav-lectures">
+<span class="lang-toggle">
+<span class="lang-ja show">講義</span>
+<span class="lang-en">Lectures</span>
+</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="contact.html" id="nav-contact">
+<span class="lang-toggle">
+<span class="lang-ja show">連絡先</span>
+<span class="lang-en">Contact</span>
+</span>
+</a>
+</li>
+<li class="nav-item">
+<span class="lang-switch nav-link" onclick="toggleLanguage()">English</span>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<main>
+<h2><span class="lang-ja show">講義リスト</span><span class="lang-en">Lectures</span></h2>
+
+<div class="lecture-year">2025年</div>
+<ul class="lecture-list">
+<li>基礎地学実験</li>
+<li>宇宙地球フィールドワークII</li>
+<li>Earth and Space Science I</li>
+<li>Earth and Space Science II</li>
+</ul>
+
+<div class="lecture-year">2024年</div>
+<ul class="lecture-list">
+<li>基礎地学実験</li>
+<li>宇宙地球フィールドワークI</li>
+<li>宇宙地球フィールドワークII</li>
+<li>Earth and Space Science I</li>
+<li>Earth and Space Science II</li>
+<li>学問への扉</li>
+<li>宇宙地球化学I（茨城大学）</li>
+</ul>
+
+<div class="lecture-year">2023年</div>
+<ul class="lecture-list">
+<li>基礎地学実験</li>
+<li>宇宙地球フィールドワークII</li>
+<li>物理学セミナー</li>
+<li>先端物理学・宇宙地球科学輪講</li>
+</ul>
+
+<div class="lecture-year">2022年</div>
+<ul class="lecture-list">
+<li>基礎地学実験</li>
+<li>宇宙地球フィールドワークII</li>
+<li>学問への扉</li>
+</ul>
+
+</main>
+
+<footer class="text-center mt-5 p-3 bg-light border-top">© 2025 Kohei Fukuda</footer>
+<script>
+    let currentLang = 'ja';
+    function toggleLanguage() {
+      const newLang = currentLang === 'en' ? 'ja' : 'en';
+      setLanguage(newLang);
+    }
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-ja').forEach(el => el.classList.toggle('show', lang === 'ja'));
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('show', lang === 'en'));
+      currentLang = lang;
+      document.querySelector('.lang-switch').textContent = lang === 'en' ? '日本語' : 'English';
+      document.querySelector('.navbar-brand').href = 'index.html?lang=' + lang;
+      document.getElementById('nav-home').href = 'index.html?lang=' + lang;
+      document.getElementById('nav-about').href = 'about.html?lang=' + lang;
+      document.getElementById('nav-research').href = 'research.html?lang=' + lang;
+      document.getElementById('nav-publications').href = 'publications.html?lang=' + lang;
+      document.getElementById('nav-lectures').href = 'lectures.html?lang=' + lang;
+      document.getElementById('nav-contact').href = 'contact.html?lang=' + lang;
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const langParam = params.get('lang');
+      if (langParam === 'en') {
+        setLanguage('en');
+      } else {
+        setLanguage('ja');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -273,13 +273,15 @@
     }
 
     function updateToggleText() {
-      const btn = document.querySelector('.more-news-btn');
-      if (currentLang === 'ja') {
-        btn.textContent = newsExpanded ? '閉じる' : 'もっと見る';
-      } else {
-        btn.textContent = newsExpanded ? 'Hide' : 'Show more';
-      }
-    }
+    　const btn = document.querySelector('.lang-' + currentLang + ' .more-news-btn'); // ← 現在の言語内だけを対象
+    　if (!btn) return; // 念のため
+    　if (currentLang === 'ja') {
+      　btn.textContent = newsExpanded ? '閉じる' : 'もっと見る';
+    　} else {
+      　btn.textContent = newsExpanded ? 'Show less' : 'Show more';
+    　}
+  　}
+
 
     window.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);
